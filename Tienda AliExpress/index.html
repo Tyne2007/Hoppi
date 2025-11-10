@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoppi</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Regla CSS necesaria para ocultar productos al inicio */
+        .product-card.hidden-product {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">Hoppi</div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="#" class="seller-dashboard">Seller Dashboard</a>
+            </nav>
+            <div class="search-icon">🔍</div>
+        </header>
+        
+        <div style="height: 1px; background-color: #ddd; margin-bottom: 30px;"></div>
+
+        <section class="hero-banner">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    
+                    <div class="slide">
+                        <div class="container hero-content">
+                            <p class="alert">Hurry up - only few lefts!</p>
+                            <h1>Next-Level Gaming Starts Here - Discover PlayStation 5 Today!</h1>
+                            <div class="ctas">
+                                <button class="btn-primary">Shop Now</button>
+                                <a href="#" class="explore-deals">Explore Deals →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="container hero-content">
+                            <p class="alert" style="color: blue;">New Release!</p>
+                            <h1>Discover the Future - Get Your New **Smartphone X** Now!</h1>
+                            <div class="ctas">
+                                <button class="btn-primary" style="background-color: blue;">View Details</button>
+                                <a href="#" class="explore-deals" style="color: blue;">See All Phones →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="container hero-content">
+                            <p class="alert" style="color: green;">SALE!</p>
+                            <h1>Up to 50% Off on **All Laptop Models** This Week Only.</h1>
+                            <div class="ctas">
+                                <button class="btn-primary" style="background-color: green;">Shop Laptops</button>
+                                <a href="#" class="explore-deals" style="color: green;">Check Offers →</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+
+        <section class="popular-products">
+            <h2>Popular products</h2>
+            <div class="product-grid" id="productGrid">
+                
+                <div class="product-card">
+                    <div class="wishlist-icon">♡</div>
+                    <div class="product-image-placeholder"></div>
+                    <div class="product-info">
+                        <p class="product-name">Apple AirPods Pro 2nd gen</p>
+                        <p class="product-description">Apple AirPods Pro (2nd gen) with M...</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> 4.5
+                        </div>
+                        <div class="actions">
+                            <span class="price">$399.99</span>
+                            <button class="buy-now-btn">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="wishlist-icon">♡</div>
+                    <div class="product-image-placeholder"></div>
+                    <div class="product-info">
+                        <p class="product-name">Canon EOS R5</p>
+                        <p class="product-description">The Canon EOS R5 is a game-chan...</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> 4.5
+                        </div>
+                        <div class="actions">
+                            <span class="price">$3899.99</span>
+                            <button class="buy-now-btn">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="wishlist-icon">♡</div>
+                    <div class="product-image-placeholder"></div>
+                    <div class="product-info">
+                        <p class="product-name">PlayStation 5</p>
+                        <p class="product-description">The PlayStation 5 takes gaming to l...</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> 4.5
+                        </div>
+                        <div class="actions">
+                            <span class="price">$499.99</span>
+                            <button class="buy-now-btn">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card hidden-product">
+                    <div class="wishlist-icon">♡</div>
+                    <div class="product-image-placeholder"></div>
+                    <div class="product-info">
+                        <p class="product-name">Samsung Galaxy S23</p>
+                        <p class="product-description">The Samsung Galaxy S23 offers an...</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> 4.5
+                        </div>
+                        <div class="actions">
+                            <span class="price">$799.99</span>
+                            <button class="buy-now-btn">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card hidden-product">
+                    <div class="wishlist-icon">♡</div>
+                    <div class="product-image-placeholder"></div>
+                    <div class="product-info">
+                        <p class="product-name">ASUS ROG Zephyrus G16</p>
+                        <p class="product-description">The ASUS ROG Zephyrus G16 gaming...</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> 4.5
+                        </div>
+                        <div class="actions">
+                            <span class="price">$1999.99</span>
+                            <button class="buy-now-btn">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card hidden-product">
+                    <div class="wishlist-icon">♡</div>
+                    <div class="product-image-placeholder"></div>
+                    <div class="product-info">
+                        <p class="product-name">Microsoft Surface Laptop</p>
+                        <p class="product-description">A powerful and elegant thin laptop...</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> 4.0
+                        </div>
+                        <div class="actions">
+                            <span class="price">$1299.00</span>
+                            <button class="buy-now-btn">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card hidden-product">
+                    <div class="wishlist-icon">♡</div>
+                    <div class="product-image-placeholder"></div>
+                    <div class="product-info">
+                        <p class="product-name">Sony WH-1000XM5</p>
+                        <p class="product-description">Industry-leading noise canceling...</p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> 4.8
+                        </div>
+                        <div class="actions">
+                            <span class="price">$429.99</span>
+                            <button class="buy-now-btn">Buy now</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        
+        <div class="see-more-btn-container">
+            <button id="loadMoreBtn" class="see-more-btn">See more</button>
+        </div>
+
+        <section class="featured-products container">
+            <h2>Featured Products</h2>
+            <div class="featured-grid">
+                
+                <div class="featured-card red">
+                    <h3>Unparalled Sound</h3>
+                    <p>Experience crystal-clear audio with premium headphones.</p>
+                    <a href="#" class="btn-secondary">Buy now →</a>
+                </div>
+
+                <div class="featured-card black">
+                    <h3>Stay Connected</h3>
+                    <p>Compact and stylish earphones for every occasion.</p>
+                    <a href="#" class="btn-secondary">Buy now →</a>
+                </div>
+
+                <div class="featured-card white">
+                    <h3>Power in Every Pixel</h3>
+                    <p>Shop the latest laptops for work, gaming, and more.</p>
+                    <a href="#" class="btn-secondary">Buy now →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gaming-experience-banner container">
+            <h2>Level Up Your <br> Gaming Experience</h2>
+            <p>From immersive sound to precise controls—everything you need to win</p>
+            <a href="#" class="btn-primary">Buy now →</a>
+        </section>
+
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Hoppi</div>
+                <p class="description">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to 
+                    make a type specimen book.
+                </p>
+            </div>
+            <p class="copyright">
+                Copyright 2025 © Hoppi All Right Reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- 1. Lógica del Carrusel ---
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        const slides = Array.from(track.querySelectorAll('.slide'));
+        const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        const getSlideWidth = () => {
+            return track.parentElement.getBoundingClientRect().width;
+        };
+
+        const moveToSlide = (index) => {
+            const slideWidth = getSlideWidth();
+            track.style.transform = 'translateX(-' + (index * slideWidth) + 'px)';
+            currentIndex = index;
+            updateDots(index);
+        };
+
+        const updateDots = (targetIndex) => {
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[targetIndex].classList.add('active');
+        };
+
+        const startAutoplay = () => {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+            }
+            
+            autoSlideInterval = setInterval(() => {
+                let newIndex = (currentIndex + 1) % totalSlides;
+                moveToSlide(newIndex);
+            }, 5000); // Cambia cada 5 segundos
+        };
+
+        // Event listener para navegación manual con los puntos
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                moveToSlide(index);
+                startAutoplay(); 
+            });
+        });
+
+        // Manejo de responsividad: ajusta la posición al cambiar el tamaño de la ventana
+        window.addEventListener('resize', () => {
+            moveToSlide(currentIndex);
+        });
+        
+        // --- 2. Lógica de Cargar Más Productos ---
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const hiddenProducts = Array.from(document.querySelectorAll('.product-card.hidden-product'));
+        const productsPerClick = 3; // Mostrar 3 productos (una fila) cada vez
+
+        let visibleCount = 0;
+
+        const loadMoreProducts = () => {
+            // Obtiene el siguiente lote de productos a mostrar
+            let productsToShow = hiddenProducts.slice(visibleCount, visibleCount + productsPerClick);
+            
+            productsToShow.forEach(product => {
+                product.classList.remove('hidden-product');
+            });
+
+            visibleCount += productsPerClick;
+
+            // Oculta el botón si ya no quedan productos por mostrar
+            if (visibleCount >= hiddenProducts.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        };
+
+        // Asigna el evento de click al botón "See more"
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', loadMoreProducts);
+        }
+
+        // --- Inicialización ---
+        moveToSlide(currentIndex);
+        startAutoplay(); 
+    </script>
+</body>
+</html>
