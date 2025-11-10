@@ -1,0 +1,460 @@
+/* --- CSS: Variables y Resets Básicos --- */
+:root {
+    --primary-color: #f26419;
+    --secondary-bg: #e8ebf3;
+    --text-color: #333;
+    --light-gray: #f9f9f9;
+    --star-color: gold;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Reducido para móvil */
+}
+
+/* --- ESTILOS BASE (MÓVIL PRIMERO: 320px a 599px) --- */
+
+/* 1. Header/Navigation Bar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.nav-links {
+    display: none; /* Ocultar enlaces de navegación en móvil */
+}
+
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 2. Hero Section (Banner/Carrusel) */
+.hero-banner {
+    background-color: var(--secondary-bg);
+    padding: 40px 0;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 90%;
+    padding: 0 20px;
+}
+
+.hero-content .alert {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 32px; /* Tamaño de fuente más pequeño */
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.ctas {
+    flex-direction: column; /* Apilar botones en móvil */
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%; /* Botón de ancho completo */
+    transition: background-color 0.2s;
+}
+
+/* Indicadores (Puntos del Carrusel) */
+.carousel-dots {
+    text-align: center;
+    padding: 15px 0 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2); 
+}
+
+/* 3. Popular Products Section */
+.popular-products h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    /* En móvil, el grid se convierte en una sola columna */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.product-card {
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.product-card.hidden-product {
+    display: none !important; /* Oculta los productos que deben cargarse con el botón */
+}
+
+.product-image-placeholder {
+    background-color: var(--light-gray);
+    height: 150px; /* Menor altura en móvil */
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.rating {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+.stars {
+    color: var(--star-color);
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.buy-now-btn {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.wishlist-icon {
+    font-size: 20px;
+    color: #aaa;
+    position: absolute;
+    top: 15px; /* Ajuste en móvil */
+    right: 15px;
+}
+
+/* Botón "See more" */
+.see-more-btn-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.see-more-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #555;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.see-more-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* 4. Featured Products */
+.featured-products {
+    margin-bottom: 50px;
+}
+
+.featured-products h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    gap: 20px;
+    align-items: stretch;
+}
+
+.featured-card {
+    min-height: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.featured-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.featured-card .btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+    z-index: 1;
+    width: fit-content;
+}
+
+/* Colores de las tarjetas destacadas */
+.featured-card.red { background-color: #e62020; }
+.featured-card.black { background-color: #1a1a1a; }
+.featured-card.white {
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    justify-content: center;
+}
+.featured-card.white .btn-secondary {
+    border-color: var(--text-color);
+    color: var(--text-color);
+}
+
+/* Banner inferior "Level Up Your Gaming Experience" */
+.gaming-experience-banner {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 40px 15px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gaming-experience-banner h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.gaming-experience-banner p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+/* 5. Footer (Pie de Página) */
+.footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #eee;
+    padding: 40px 0 15px;
+    text-align: center;
+}
+
+.footer .footer-content {
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.footer .logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer .description {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.8;
+    padding: 0 10px;
+}
+
+.footer .copyright {
+    font-size: 11px;
+    color: #aaa;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+
+/* ---------------------------------------------------- */
+/* --- MEDIA QUERIES PARA ADAPTACIÓN --- */
+/* ---------------------------------------------------- */
+
+/* --- 1. Tabletas y Laptops Pequeñas (600px y más) --- */
+@media (min-width: 600px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Header */
+    .header {
+        padding: 20px 0;
+    }
+
+    /* Hero */
+    .hero-banner {
+        padding: 50px 0;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .ctas {
+        flex-direction: row; /* Vuelve a estar en fila */
+        align-items: center;
+        gap: 20px;
+    }
+    .btn-primary {
+        width: auto; /* Botón de tamaño normal */
+    }
+
+    /* Productos */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    }
+    
+    /* Featured Products */
+    .featured-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 o 3 por fila */
+    }
+    .featured-card {
+        min-height: 300px;
+    }
+}
+
+/* --- 2. Escritorio y Laptops Grandes (992px y más) --- */
+@media (min-width: 992px) {
+    /* Header */
+    .header {
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .nav-links {
+        display: flex; /* Mostrar enlaces de navegación */
+        gap: 30px;
+    }
+    .seller-dashboard {
+        border-left: 1px solid #ddd;
+        padding-left: 30px;
+    }
+    
+    /* Hero */
+    .hero-banner {
+        padding: 60px 0;
+    }
+    .hero-content {
+        max-width: 550px;
+    }
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    /* Productos */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 3 o más productos por fila */
+    }
+
+    /* Featured Products */
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas definidas */
+    }
+    .featured-card {
+        min-height: 350px;
+    }
+    
+    /* Banner Gaming */
+    .gaming-experience-banner h2 {
+        font-size: 32px;
+    }
+}
